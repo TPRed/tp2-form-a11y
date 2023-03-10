@@ -90,14 +90,14 @@
 
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
-                <section class="section_bouton-radio">
-                    <input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""> <img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="imge_chambre_simple"><p class="p__bouton-radio-chambre">Chambre simple</p>
-                    <input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><p class="p__bouton-radio-chambre">Chambre double</p>
-                    <input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><p class="p__bouton-radio-chambre">Chambre familiale</p>
-                </section>
+                <div class="section_bouton-radio">
+                    <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""> <img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><p class="p__bouton-radio-chambre">Chambre simple</p></label>
+                    <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><p class="p__bouton-radio-chambre">Chambre double</p></label>
+                    <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><p class="p__bouton-radio-chambre">Chambre familiale</p></label>
+                </div>
 
                 <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
-                <input class="bouton__dejeuner" type="checkbox"><p class="p__bouton-dejeuner">Inclure le petit déjeuner s'il-vous-plait</p>
+                <label><input class="bouton__dejeuner" type="checkbox">Inclure le petit déjeuner s'il-vous-plait</label>
 
                 <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
                     12.50$

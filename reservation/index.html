@@ -49,11 +49,14 @@
                     <legend class="legend">
                         <h2>1. Vérifier la disponibilité</h2>
                     </legend>
-                    <label for="date-arrivee">Date d'arrivée :</label>
-                    <input type="date" id="date-arrivee" name="date-arrivee"required>
-
-                    <label for="date-depart">Date de départ :</label>
-                    <input type="date" id="date-depart" name="date-depart" required>
+                    <div class="ctnValidation">
+                        <label for="date-arrivee">Date d'arrivée :</label>
+                        <input type="date" id="date-arrivee" name="date-arrivee"required>
+                    </div>
+                    <div class="ctnValidation">
+                        <label for="date-depart">Date de départ :</label>
+                        <input type="date" id="date-depart" name="date-depart" required>
+                    </div>
 
                     <button type="button" id="check-availability-button" required>Vérifier la disponibilité</button>
                     <p id="availability-message"></p>
@@ -66,13 +69,28 @@
                     <legend class="legend">
                         <h2>2. Nombre de personnes</h2>
                     </legend>
-                    <label>Adultes (maximum 4):</label>
-                    <input id="adultes" name="adultes" required>
-                    <label>Enfants (maximum 5):</label>
-                    <input id="enfants" name="enfants" required >
-                   
-                    
-
+                    <div class="nombre_adultes ctnValidation">
+                        <label>Adultes (maximum 4):</label>
+                        <input id="adultes" name="adultes" required>
+                        <p class="erreur">
+                            <span>
+                                <span class="screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                            4 adultes maximum.
+                        </p>
+                    </div>
+                    <div class="nombre_enfants ctnValidation">
+                        <label>Enfants (maximum 5):</label>
+                        <input id="enfants" name="enfants" required>
+                        <p class="erreur">
+                            <span>
+                                <span class="screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                            5 enfants maximums.
+                        </p>
+                    </div>
                     <p>
                         Notes: <br>
                         1. la chambre familiale peut loger jusqu'à 6 personnes<br>
@@ -91,9 +109,11 @@
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
                 <div class="section_bouton-radio">
-                    <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""> <img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><p class="p__bouton-radio-chambre">Chambre simple</p></label>
-                    <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><p class="p__bouton-radio-chambre">Chambre double</p></label>
-                    <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><p class="p__bouton-radio-chambre">Chambre familiale</p></label>
+                    <ul class="ul_radio">
+                        <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""> <img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><span class="span__bouton-radio-chambre">Chambre simple</span></label>
+                        <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><span class="span__bouton-radio-chambre">Chambre double</span></label>
+                        <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" alt=""> <img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><span class="span__bouton-radio-chambre">Chambre familiale</span></label>
+                    </ul>
                 </div>
 
                 <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
@@ -110,14 +130,58 @@
                     <legend class="legend">
                         <h2>4. Identification</h2>
                     </legend>
-                    <label for="prenom">Prénom :</label>
-                    <input id="prenom" name="prenom" required>
-                    <label for="nom">Nom :</label>
-                    <input id="nom" name="nom" required>
-                    <label for="email">Email :</label>
-                    <input id="email" name="email" required>
-                    <label for="telephone">Téléphone :</label>
-                    <input id="telephone" name="telephone" required>
+                    <div class="prenom ctnValidation">
+                        <p>
+                            <label for="prenom">Prénom :</label>
+                            <input id="prenom" name="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                        </p>
+                        <p class="erreur">
+                            <span>
+                                <span class="screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                            Le prénom comporte un ou plusieurs caractères interdits.
+                        </p>
+                    </div>
+                    <div class="nom ctnValidation">
+                        <p>
+                            <label for="nom">Nom :</label>
+                            <input id="nom" name="nom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                        </p>
+                        <p class="erreur">
+                            <span>
+                                <span class="screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                            Le nom comporte un ou plusieurs caractères interdits.
+                        </p>
+                    </div>
+                    <div class="email ctnValidation">
+                        <p>
+                            <label for="email">Email :</label>
+                            <input id="email" name="email" required>
+                        </p>
+                        <p class="erreur">
+                            <span>
+                                <span class="screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                            Le email ne contient pas de @ ou de ".".
+                        </p>
+                    </div>
+                    <div class="telephone ctnValidation">
+                        <p>
+                            <label for="telephone">Téléphone :</label>
+                            <input id="telephone" name="telephone" required>
+                        </p>
+                        <p class="erreur">
+                            <span>
+                                <span class="screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                            Le numéro de téléphone de doit pas contenir d'espace et il doit avoir des "-".
+                        </p>
+                    </div>
                 </fieldset>
             </div>
            

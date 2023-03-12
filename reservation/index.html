@@ -5,36 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="../css/utilitaires.css">
     <link rel="stylesheet" type="text/css" media="all" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" media="all" href="../css/typo.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../css/utilitaires.css">
 
     <title>Réservation | Auberge du jacana africain</title>
 
 </head>
 
-<body>
-    <header>
+<body> 
+   
+    <header class="header">
         <a href="../index.html">
-            <p><img src="../images/logo-jacana.png" alt=""></p>
+            <img class="header__img" src="../images/logo-jacana.png" alt="">
             <p class="titre">Auberge du jacana africain</p>
-        </a>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a class="nav__lien" href="..index.html">Accueil</a>
+        </a> 
+        <nav class="menu"> 
+            <ul class="menu__liste">
+                <li class="menu__item">
+                    <a class="menu__lien" href="..index.html">Accueil</a>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__lien" href="#">Historique</a>
+                <li class="menu__item">
+                    <a class="menu__lien" href="#">Historique</a>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__lien" href="#">Région</a>
+                <li class="menu__item">
+                    <a class="menu__lien" href="#">Région</a>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__lien" href="#">Contact</a>
+                <li class="menu__item">
+                    <a class="menu__lien" href="#">Contact</a>
                 </li>
-                <li class="nav_item">
-                    <a class="nav__lien" href="index.html">Réservation</a>
+                <li class="menu__item">
+                    <a class="menu__lien" href="index.html">Réservation</a>
                 </li>
             </ul>
         </nav>
@@ -180,7 +181,13 @@
                     </legend>
                     <div class="nombre_adultes ctnValidation">
                         <label>Adultes (maximum 4):</label>
-                        <input id="adultes" name="adultes" required>
+                        <select class="nombre-adulte" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                         <p class="erreur">
                             <span>
                                 <span class="screen-reader-only">Avertissement</span>
@@ -191,7 +198,14 @@
                     </div>
                     <div class="nombre_enfants ctnValidation">
                         <label>Enfants (maximum 5):</label>
-                        <input id="enfants" name="enfants" required>
+                        <select class="nombre-enfant" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                         <p class="erreur">
                             <span>
                                 <span class="screen-reader-only">Avertissement</span>
@@ -218,10 +232,10 @@
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
                 <div class="section_bouton-radio">
-                    <ul class="ul_radio">
-                        <label for="boutonRadioChambre"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""> <img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><span class="span__bouton-radio-chambre">Chambre simple</span></label>
-                        <label for="boutonRadioChambre2"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre2" alt=""> <img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><span class="span__bouton-radio-chambre">Chambre double</span></label>
-                        <label for="boutonRadioChambre3"><input class="bouton__radio" type="radio" name="bouton-radio" id="boutonRadioChambre3" alt=""> <img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><span class="span__bouton-radio-chambre">Chambre familiale</span></label>
+                    <ul class="ul__radio">
+                        <label for="boutonRadioChambre" class="boutonRadioChambre"> <input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""><img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><span class="span__bouton-radio-chambre">Chambre simple</span></label>
+                        <label for="boutonRadioChambre2" class="boutonRadioChambre"><input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre2" alt=""><img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><span class="span__bouton-radio-chambre">Chambre double</span></label>
+                        <label for="boutonRadioChambre3" class="boutonRadioChambre"><input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre3" alt=""><img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><span class="span__bouton-radio-chambre">Chambre familiale</span></label>
                     </ul>
                 </div>
 

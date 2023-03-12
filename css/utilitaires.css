@@ -3,12 +3,13 @@
 
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
 :root {
-    --couleur-texte: #022b50;
-    --couleur-titres-h1-h3: darkmagenta;
+    --couleur-texte: #000000;
+    --couleur-titres-h1-h3: rgb(0, 0, 0);
     --couleur-dominante: darkmagenta;
     --couleur-secondaire: #418cff;
     --bg-couleur-contraste:#efefef;
     --box-shadow:5px 5px 5px;
+    padding: 0em 10px 0em 10px;
 }
 
 /*** Clearfix ***/
@@ -44,6 +45,7 @@ abbr[title]:hover{
 /** Accessibilité
   * Pour cacher visuellement tout en gardant accessible un contenu:
   * screen-reader-only ou visuallyhidden **/
+  /*
 .screen-reader-only,
 .visuallyhidden {
     border: 0;
@@ -54,8 +56,8 @@ abbr[title]:hover{
     padding: 0;
     position: absolute;
     width: 1px;
-}
-
+}*/
+/*
 .screen-reader-only.focusable:active,
 .screen-reader-only.focusable:focus,
 .visuallyhidden.focusable:active,
@@ -66,4 +68,58 @@ abbr[title]:hover{
     overflow: visible;
     position: static;
     width: auto;
+}*/
+.header__img{
+    display: flex;
+    width:30%;
+    float:left;
+}
+.titre{
+    display:flex;
+    justify-content: center;
+    padding: 10% 0% 0% 1%;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+.titre:link,
+.titre:visited{
+    color:black;
+    text-decoration: none;
+}
+.titre:hover,
+.titre:active{
+    color:black;
+    text-decoration:none;
+}
+.menu__liste{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    list-style: none;
+    margin-left:-2em;
+    margin-right: 2em;
+    padding-top: 2em; 
+}
+.nombre-adulte{
+    width:3em;
+}
+.nombre-enfant{
+    width:3em;
+}
+.ul__radio{
+    display: flex;
+    padding-bottom:3em;
+}
+.boutonRadioChambre{
+    display: flex;
+    justify-content: space-evenly;
+}
+.img__radio{
+    display: flex;
+    justify-content: space-around;
+
+}
+.span__bouton-radio-chambre{
+    display: flex;
 }

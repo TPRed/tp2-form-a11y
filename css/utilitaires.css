@@ -95,7 +95,7 @@ abbr[title]:hover{
     }
 }
 .header{
-    background-color:black;
+    background-color:darkslategrey;
 }
 .titre:link,
 .titre:visited{
@@ -192,7 +192,7 @@ border-right: 1px solid white;
 
 .footer{
     color: white;
-    background: black;
+    background-color: darkslategrey;
 }
 .footer__p{
     display: flex;

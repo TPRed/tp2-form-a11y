@@ -180,12 +180,12 @@ border-right: 1px solid white;
     display:flex;
     justify-content: center;
 }
-  /*  .boutonRadioChambre:hover,
+    .boutonRadioChambre:hover,
     .boutonRadioChambre:focus{
         background-color: lightgrey;
         border: 1px solid black;
-    }*/
-    .bouton__radio:checked{
+    }
+    .bouton__radio:clicked{
         background-color:aquamarine;
         border: 1px solid aquamarine;
     }

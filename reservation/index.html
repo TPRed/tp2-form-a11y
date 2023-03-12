@@ -18,12 +18,12 @@
     <header class="header">
         <a href="../index.html">
             <img class="header__img" src="../images/logo-jacana.png" alt="">
-            <p class="titre">Auberge du jacana africain</p>
+            <h1 class="titre">Auberge du jacana africain</h1>
         </a> 
         <nav class="menu"> 
             <ul class="menu__liste">
                 <li class="menu__item">
-                    <a class="menu__lien" href="..index.html">Accueil</a>
+                    <a class="menu__lien" href="../index.html">Accueil</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__lien" href="#">Historique</a>
@@ -35,7 +35,7 @@
                     <a class="menu__lien" href="#">Contact</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__lien" href="index.html">Réservation</a>
+                    <a class="menu__lien" href="../reservation/index.html">Réservation</a>
                 </li>
             </ul>
         </nav>
@@ -44,14 +44,14 @@
     </header>
 
     <main>
-        <h1 >Réservation</h1>
+        <h2 class="h2">Réservation</h2>
        
         <form id="reservation-form" action="reservation.html">
            
             <div class="form-section"> 
                 <fieldset class="fieldset">
                     <legend class="legend">
-                        <h2>1. Vérifier la disponibilité</h2>
+                        <h3>1. Vérifier la disponibilité</h3>
                     </legend>
                     <div class="ctnValidation">
                         <label for="date-arrivee">Date d'arrivée :</label>
@@ -168,7 +168,7 @@
                         </select>
                     </div>
 
-                    <button type="button" id="check-availability-button" required>Vérifier la disponibilité</button>
+                    <button class="bouton__disponibilite" type="button" id="check-availability-button" required>Vérifier la disponibilité</button>
                     <p id="availability-message"></p>
                 </fieldset>
             </div>
@@ -177,7 +177,7 @@
             <div class="form-section">
                 <fieldset class="fieldset">
                     <legend class="legend">
-                        <h2>2. Nombre de personnes</h2>
+                        <h3>2. Nombre de personnes</h3>
                     </legend>
                     <div class="nombre_adultes ctnValidation">
                         <label>Adultes (maximum 4):</label>
@@ -226,14 +226,14 @@
             <div class="form-section">
                 <fieldset class="fieldset">
                     <legend class="legend">
-                        <h2>3. Choix chambre et forfait </h2>
+                        <h3>3. Choix chambre et forfait </h3>
                     </legend>
 
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
                 <div class="section_bouton-radio">
                     <ul class="ul__radio">
-                        <label for="boutonRadioChambre" class="boutonRadioChambre"> <input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""><img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><span class="span__bouton-radio-chambre">Chambre simple</span></label>
+                        <label for="boutonRadioChambre" class="boutonRadioChambre"><input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre" required alt=""><img class="img__radio" src="../images/types-de-chambre/1-lit-double.webp" alt="" id="image_chambre_simple"><span class="span__bouton-radio-chambre">Chambre simple</span></label>
                         <label for="boutonRadioChambre2" class="boutonRadioChambre"><input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre2" alt=""><img class="img__radio" src="../images/types-de-chambre/2-lits-double.jpg" alt="" id="image_chambre_double"><span class="span__bouton-radio-chambre">Chambre double</span></label>
                         <label for="boutonRadioChambre3" class="boutonRadioChambre"><input class="bouton__radio screen-reader-only" type="radio" name="bouton-radio" id="boutonRadioChambre3" alt=""><img class="img__radio" src="../images/types-de-chambre/chambre-familiale.jpg" alt="" id="image_chambre_familiale"><span class="span__bouton-radio-chambre">Chambre familiale</span></label>
                     </ul>
@@ -251,7 +251,7 @@
             <div class="form-section">
                 <fieldset class="fieldset">
                     <legend class="legend">
-                        <h2>4. Identification</h2>
+                        <h3>4. Identification</h2>
                     </legend>
                     <div class="prenom ctnValidation">
                         <p>
@@ -314,8 +314,8 @@
     </main>
     <hr>
     <aside>
-        <h2>Nous joindre</h2>
-        <h3>aubergedujacana@gmail.com</h3>
+        <h3 class="h3__nous-joindre">Nous joindre</h3>
+        <h4 class="h4__email">aubergedujacana@gmail.com</h4>
         <p>
             Pour toutes demandes d’information, ou pour faire une demande de réservation pour l’un de nos chalets,
             remplisser le formulaire ci-contre.
@@ -325,14 +325,21 @@
 
         </p>
     </aside>
-    <footer>
-        <a class="media-sociaux" href="#">Facebook</a>
-        <a class="media-sociaux" href="#">Instagram</a>
+    <footer class="footer">
+        <p class="footer__p">Nos média sociaux</p>
+        <ul class="media-sociaux">
+            <li class="media-sociaux__item">
+                 <a class="media-sociaux__lien" href="#">Facebook</a>
+            </li>
+            <li class="media-sociaux__item">
+                <a class="media-sociaux__lien" href="#">Instagram</a>
+            </li>
+        </ul>
         <button class="bouton__footer">Partager cette page</button>
         <!-- Intégrer les medias sociaux instagram et facebook + un bouton pour partager cette page -->
-        <p>
-            Ce site Web est un projet pédagogique réalisé par
-            <a href="">Mathieu Thérien</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF Intégration
+        <p class="footer__p2">
+            Ce site Web est un projet pédagogique réalisé par 
+            <a href="">Mathieu Thérien</a> dans le cadre du cours 582-204-SF Intégration
             II,
             programme des <a href="https://timcsf.cegep-ste-foy.qc.ca/">Techniques d'intégration multimédia</a>,
             <a href="https://www.csfoy.ca/accueil/">Cégep de Sainte-Foy</a>.

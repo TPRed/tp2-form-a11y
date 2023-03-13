@@ -172,6 +172,9 @@ border-right: 1px solid white;
     padding-bottom:3em;
     justify-content: space-around;
 }
+.li__radio{
+   list-style:none;
+}
 .img__radio{
     display: flex;
     justify-content: center;

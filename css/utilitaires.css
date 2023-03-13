@@ -180,16 +180,15 @@ border-right: 1px solid white;
     display:flex;
     justify-content: center;
 }
-    .boutonRadioChambre:hover,
-    .boutonRadioChambre:focus{
+    .li__radio:hover,
+    .li__radio:focus{
         background-color: lightgrey;
         border: 1px solid black;
     }
-    .boutonRadioChambre:clicked{
-        background-color:aquamarine;
-        border: 1px solid aquamarine;
+    input[type=radio]:checked + label>span{
+        background-color: grey;
+        border: 1px solid black;
     }
-
 .footer{
     color: white;
     background-color: darkslategrey;
